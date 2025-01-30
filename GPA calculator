@@ -1,0 +1,104 @@
+import pandas as pd
+
+def calculate_year_gpa(courses):
+    gpv_mapping = {
+        'A+': 5.00, 'A': 4.00, 'B+': 3.50, 'B': 3.00,
+        'C+': 2.37, 'C': 1.00, 'S': 1.00, 'IN': 0.00
+    }
+    
+    total_credits = 0
+    total_grade_points = 0
+    
+    for course in courses:
+        if course[2] != 'IN':  # Skip incomplete courses
+            credits = int(course[1])
+            gpv = gpv_mapping[course[2]]
+            grade_points = credits * gpv
+            
+            total_credits += credits
+            total_grade_points += grade_points
+    
+    gpa = total_grade_points / total_credits if total_credits > 0 else 0
+    return {
+        'gpa': round(gpa, 2),
+        'credits': total_credits,
+        'grade_points': total_grade_points
+    }
+
+# Year 1 Courses
+year1 = [
+    ['MAT1100', 30, 'A'],
+    ['BIO1412', 15, 'C+'],
+    ['BIO1401', 15, 'C+'],
+    ['CHE1000', 30, 'B+'],
+    ['PHY1010', 30, 'B']
+]
+
+# Year 2 Courses
+year2 = [
+    ['CSC2912', 15, 'B'],
+    ['CSC2000', 15, 'B+'],
+    ['CSC2202', 15, 'C+'],
+    ['CSC2702', 15, 'B'],
+    ['CSC2111', 15, 'B+'],
+    ['CSC2101', 15, 'B+'],
+    ['CSC2901', 15, 'B+']
+]
+
+# Year 3 Courses
+year3 = [
+    ['CSC3009', 30, 'IN'],
+    ['CSC3402', 15, 'B+'],
+    ['CSC3011', 15, 'B+'],
+    ['CSC3712', 15, 'B'],
+    ['CSC3120', 30, 'B'],
+    ['CSC3301', 15, 'B'],
+    ['CSC3801', 15, 'B'],
+    ['CSC3612', 15, 'B+']
+]
+
+# Year 4 Courses
+year4 = [
+    ['CSC4792', 15, 'A'],
+    ['CSC3009', 30, 'S'],
+    ['CSC4722', 15, 'B+'],
+    ['CSC4130', 30, 'A'],
+    ['CSC4004', 30, 'A'],
+    ['CSC4745', 15, 'A+'],
+    ['CSC4835', 15, 'A'],
+    ['CSC4812', 15, 'A']
+]
+
+# Calculate GPAs for each year
+y1_result = calculate_year_gpa(year1)
+y2_result = calculate_year_gpa(year2)
+y3_result = calculate_year_gpa(year3)
+y4_result = calculate_year_gpa(year4)
+
+# Calculate Cumulative GPA
+total_credits = y1_result['credits'] + y2_result['credits'] + y3_result['credits'] + y4_result['credits']
+total_grade_points = y1_result['grade_points'] + y2_result['grade_points'] + y3_result['grade_points'] + y4_result['grade_points']
+cumulative_gpa = round(total_grade_points / total_credits, 2)
+
+# Determine classification
+def get_classification(gpa):
+    if gpa >= 3.75:
+        return "Distinction"
+    elif gpa >= 3.25:
+        return "Merit"
+    elif gpa >= 2.68:
+        return "Credit"
+    else:
+        return "Pass"
+
+print("GPA Calculation Results")
+print("======================")
+print(f"Year 1 GPA: {y1_result['gpa']} ({y1_result['credits']} credits)")
+print(f"Year 2 GPA: {y2_result['gpa']} ({y2_result['credits']} credits)")
+print(f"Year 3 GPA: {y3_result['gpa']} ({y3_result['credits']} credits)")
+print(f"Year 4 GPA: {y4_result['gpa']} ({y4_result['credits']} credits)")
+print("\nCumulative Results")
+print("=================")
+print(f"Cumulative GPA: {cumulative_gpa}")
+print(f"Total Credits: {total_credits}")
+print(f"Classification: {get_classification(cumulative_gpa)}")
