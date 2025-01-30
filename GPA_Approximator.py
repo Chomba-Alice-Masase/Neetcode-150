@@ -38,45 +38,45 @@ def calculate_year_gpa(courses, year_label):
 
 # First Year Courses
 year1 = [
-    {'course': 'MAT1100', 'credits': 30, 'grade': 'A'},    # Foundation Mathematics
-    {'course': 'BIO1412', 'credits': 15, 'grade': 'C+'},   # Molecular Biology
-    {'course': 'BIO1401', 'credits': 15, 'grade': 'C+'},   # Cells and Biomolecules
-    {'course': 'CHE1000', 'credits': 30, 'grade': 'B+'},   # Introductory Chemistry
-    {'course': 'PHY1010', 'credits': 30, 'grade': 'B'}     # Introductory Physics
+    {'course': 'MAT1100', 'credits': 30, 'grade': ''},    # Foundation Mathematics
+    {'course': 'BIO1412', 'credits': 15, 'grade': ''},   # Molecular Biology
+    {'course': 'BIO1401', 'credits': 15, 'grade': ''},   # Cells and Biomolecules
+    {'course': 'CHE1000', 'credits': 30, 'grade': ''},   # Introductory Chemistry
+    {'course': 'PHY1010', 'credits': 30, 'grade': ''}     # Introductory Physics
 ]
 
 # Second Year Courses
 year2 = [
-    {'course': 'CSC2912', 'credits': 15, 'grade': 'B'},    # Numerical Analysis
-    {'course': 'CSC2000', 'credits': 30, 'grade': 'B+'},   # Computer Programming
-    {'course': 'CSC2202', 'credits': 15, 'grade': 'C+'},   # Operating Systems
-    {'course': 'CSC2702', 'credits': 15, 'grade': 'B'},    # Database Management
-    {'course': 'CSC2111', 'credits': 15, 'grade': 'B+'},   # Computer Architecture
-    {'course': 'CSC2101', 'credits': 15, 'grade': 'B+'},   # Computer Systems
-    {'course': 'CSC2901', 'credits': 15, 'grade': 'B+'}    # Discrete Structures
+    {'course': 'CSC2912', 'credits': 15, 'grade': ''},    # Numerical Analysis
+    {'course': 'CSC2000', 'credits': 30, 'grade': ''},   # Computer Programming
+    {'course': 'CSC2202', 'credits': 15, 'grade': ''},   # Operating Systems
+    {'course': 'CSC2702', 'credits': 15, 'grade': ''},    # Database Management
+    {'course': 'CSC2111', 'credits': 15, 'grade': ''},   # Computer Architecture
+    {'course': 'CSC2101', 'credits': 15, 'grade': ''},   # Computer Systems
+    {'course': 'CSC2901', 'credits': 15, 'grade': ''}    # Discrete Structures
 ]
 
 # Third Year Courses
 year3 = [
-    {'course': 'CSC3402', 'credits': 15, 'grade': 'B+'},   # AI Fundamentals
-    {'course': 'CSC3011', 'credits': 15, 'grade': 'B+'},   # Algorithm and Complexity
-    {'course': 'CSC3712', 'credits': 15, 'grade': 'B'},    # Advanced Databases
-    {'course': 'CSC3120', 'credits': 30, 'grade': 'B'},    # Digital Electronics
-    {'course': 'CSC3301', 'credits': 15, 'grade': 'B'},    # Programming Languages
-    {'course': 'CSC3801', 'credits': 15, 'grade': 'B'},    # Data Communication
-    {'course': 'CSC3612', 'credits': 15, 'grade': 'B+'}    # IT Project Management
+    {'course': 'CSC3402', 'credits': 15, 'grade': ''},   # AI Fundamentals
+    {'course': 'CSC3011', 'credits': 15, 'grade': ''},   # Algorithm and Complexity
+    {'course': 'CSC3712', 'credits': 15, 'grade': ''},    # Advanced Databases
+    {'course': 'CSC3120', 'credits': 30, 'grade': ''},    # Digital Electronics
+    {'course': 'CSC3301', 'credits': 15, 'grade': ''},    # Programming Languages
+    {'course': 'CSC3801', 'credits': 15, 'grade': ''},    # Data Communication
+    {'course': 'CSC3612', 'credits': 15, 'grade': ''}    # IT Project Management
 ]
 
 # Fourth Year Courses
 year4 = [
-    {'course': 'CSC4792', 'credits': 15, 'grade': 'A'},    # Data Mining
+    {'course': 'CSC4792', 'credits': 15, 'grade': ''},    # Data Mining
    # {'course': 'CSC3009', 'credits': 30, 'grade': 'S'},    # Industrial Training
-    {'course': 'CSC4722', 'credits': 15, 'grade': 'B+'},   # Distributed Systems
-    {'course': 'CSC4130', 'credits': 30, 'grade': 'A'},    # Hardware Design
-    {'course': 'CSC4004', 'credits': 15, 'grade': 'A'},    # Projects
-    {'course': 'CSC4745', 'credits': 15, 'grade': 'A+'},   # Multimedia & HCI
-    {'course': 'CSC4835', 'credits': 15, 'grade': 'A'},    # Wireless & Mobile
-    {'course': 'CSC4812', 'credits': 15, 'grade': 'A'}     # Cloud Computing
+    {'course': 'CSC4722', 'credits': 15, 'grade': ''},   # Distributed Systems
+    {'course': 'CSC4130', 'credits': 30, 'grade': ''},    # Hardware Design
+    {'course': 'CSC4004', 'credits': 15, 'grade': ''},    # Projects
+    {'course': 'CSC4745', 'credits': 15, 'grade': ''},   # Multimedia & HCI
+    {'course': 'CSC4835', 'credits': 15, 'grade': ''},    # Wireless & Mobile
+    {'course': 'CSC4812', 'credits': 15, 'grade': ''}     # Cloud Computing
 ]
 
 # Calculate GPAs with detailed breakdown
